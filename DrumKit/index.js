@@ -1,4 +1,4 @@
-var buttons = document.querySelectorAll("button");
+var buttons = document.querySelectorAll(".drum");
 
 function play0(){
     var crash = new Audio("sounds/crash.mp3");
@@ -39,3 +39,37 @@ var play = [play0, play1, play2, play3, play4, play5, play6];
 for (index = 0; index < buttons.length; index++){
     buttons[index].addEventListener("click", play[index]);
 }
+
+document.addEventListener('keydown', function (event) {
+    switch (event.key) {
+        case "w":
+            {
+                play0();
+            }
+        case "a":
+            {
+                play1();
+            }
+        case "s":
+            {
+                play2();
+            }
+        case "d":
+            {
+                play3();
+            }
+        case "j":
+            {
+                play4();
+            }
+        case "k":
+            {
+                play5();
+            }
+        case "l":
+            {
+                play6();
+            }
+    }
+    }
+  );
